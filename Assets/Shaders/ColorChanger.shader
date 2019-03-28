@@ -3,7 +3,7 @@
     Properties
     {
         _Color ("Color", Color) = (1,1,1,1)
-		_MaskColor("Masked Color", Color) = (1,1,1,1)
+		_MaskColor("Mask Color", Color) = (1,1,1,1)
 		_ReplaceColor("Replace Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_MaskTex("Mask", 2D) = "white" {}
@@ -34,23 +34,21 @@
         half _Metallic;
         fixed4 _Color, _MaskColor, _ReplaceColor;
 
-        // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
-        // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
-        // #pragma instancing_options assumeuniformscaling
         UNITY_INSTANCING_BUFFER_START(Props)
-            // put more per-instance properties here
+			//UNITY_DEFINE_INSTANCED_PROP(fixed4, _ReplaceColor)
         UNITY_INSTANCING_BUFFER_END(Props)
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
+			// Check if the current uv coordinates color corresponds with the mask color
 			float isMask = tex2D(_MaskTex, IN.uv_MaskTex) == _MaskColor;
 
-			fixed4 e = tex2D(_MaskTex, IN.uv_MaskTex) * _ReplaceColor;
-
             // Albedo comes from a texture tinted by color
-            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color + e;
-            //o.Albedo = (1 - isMask) * c.rgb + isMask * _ReplaceColor;
-			o.Albedo = c.rgb;
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+
+			o.Albedo = /*(1 - isMask) **/ c.rgb + isMask * _ReplaceColor;
+			//o.Albedo = (1 - isMask) *  o.Albedo + isMask * UNITY_ACCESS_INSTANCED_PROP(Props, _ReplaceColor);
+
             // Metallic and smoothness come from slider variables
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
