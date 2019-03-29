@@ -666,7 +666,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1687702238}
-        m_MethodName: ChangeColor
+        m_MethodName: SetColor
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -882,7 +882,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1687702238}
-        m_MethodName: ChangeColor
+        m_MethodName: SetColor
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1011,7 +1011,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1687702238}
-        m_MethodName: ChangeColor
+        m_MethodName: SetColor
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1155,11 +1155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24830079f071294abfd8bce6f6e2f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {r: 0.6132076, g: 0.04004621, b: 0, a: 0}
-  g: {r: 0.10431264, g: 0.5943396, b: 0, a: 0}
-  b: {r: 0.003114995, g: 0.56380004, b: 0.6603774, a: 0}
-  o: {r: 0.6415094, g: 0.3220639, b: 0, a: 0}
-  knightRenderer: {fileID: 1056829365}
+  m_colorRed: {r: 0.9607844, g: 0.0627451, b: 0, a: 0}
+  m_colorGreen: {r: 0.16862746, g: 0.9607844, b: 0, a: 0}
+  m_colorBlue: {r: 0, g: 0.8196079, b: 0.9607844, a: 0}
+  m_colorOrange: {r: 0.9607844, g: 0.48235297, b: 0, a: 0}
+  m_knightRenderer: {fileID: 1056829365}
 --- !u!4 &1687702239
 Transform:
   m_ObjectHideFlags: 0
@@ -1335,7 +1335,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1687702238}
-        m_MethodName: ChangeColor
+        m_MethodName: SetColor
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
