@@ -3,7 +3,6 @@
     Properties
     {
         _Color ("Color", Color) = (1,1,1,1)
-		_MaskColor("Mask Color", Color) = (1,1,1,1)
 		_ReplaceColor("Replace Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_MaskTex("Mask", 2D) = "white" {}
@@ -32,7 +31,7 @@
 
         half _Glossiness;
         half _Metallic;
-        fixed4 _Color, _MaskColor, _ReplaceColor;
+        fixed4 _Color, _ReplaceColor;
 
         UNITY_INSTANCING_BUFFER_START(Props)
 			//UNITY_DEFINE_INSTANCED_PROP(fixed4, _ReplaceColor)
@@ -40,13 +39,11 @@
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
-			// Check if the current uv coordinates color corresponds with the mask color
-			float isMask = tex2D(_MaskTex, IN.uv_MaskTex) == _MaskColor;
-
             // Albedo comes from a texture tinted by color
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+			fixed4 maskColor = tex2D(_MaskTex, IN.uv_MaskTex);
 
-			o.Albedo = /*(1 - isMask) **/ c.rgb + isMask * _ReplaceColor;
+			o.Albedo = (1- maskColor) * c.rgb  +  _ReplaceColor * maskColor;
 			//o.Albedo = (1 - isMask) *  o.Albedo + isMask * UNITY_ACCESS_INSTANCED_PROP(Props, _ReplaceColor);
 
             // Metallic and smoothness come from slider variables
