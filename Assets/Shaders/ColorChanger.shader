@@ -8,7 +8,6 @@
 		_MaskTex("Mask", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
-
     }
     SubShader
     {
@@ -36,6 +35,8 @@
         UNITY_INSTANCING_BUFFER_START(Props)
 			//UNITY_DEFINE_INSTANCED_PROP(fixed4, _ReplaceColor)
         UNITY_INSTANCING_BUFFER_END(Props)
+
+		// Ref: https://answers.unity.com/questions/14770/creating-a-circular-progressbar-timer.html
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
