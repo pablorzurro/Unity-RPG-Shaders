@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: 3e82ba274efba5d4990452dc62f5b5c5
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Arm.L
+    100002: Arm.R
+    100004: Chest
+    100006: Fingers.L
+    100008: Fingers.L_end
+    100010: Fingers.R
+    100012: Fingers.R_end
+    100014: Foot.L
+    100016: Foot.R
+    100018: Forearm.L
+    100020: Forearm.R
+    100022: Hand.L
+    100024: Hand.R
+    100026: Head
+    100028: Head_end
+    100030: Hips
+    100032: //RootNode
+    100034: Knight
+    100036: Knight Armature
+    100038: Leg.IK.L
+    100040: Leg.IK.L_end
+    100042: Leg.IK.R
+    100044: Leg.IK.R_end
+    100046: Leg.Pole.L
+    100048: Leg.Pole.L_end
+    100050: Leg.Pole.R
+    100052: Leg.Pole.R_end
+    100054: Middle Spine
+    100056: Neck
+    100058: Shin.L
+    100060: Shin.R
+    100062: Shoulder.L
+    100064: Shoulder.R
+    100066: Thigh.L
+    100068: Thigh.R
+    100070: Thumb.1.L
+    100072: Thumb.1.R
+    100074: Thumb.2.L
+    100076: Thumb.2.L_end
+    100078: Thumb.2.R
+    100080: Thumb.2.R_end
+    100082: Toes.L
+    100084: Toes.L_end
+    100086: Toes.R
+    100088: Toes.R_end
+    400000: Arm.L
+    400002: Arm.R
+    400004: Chest
+    400006: Fingers.L
+    400008: Fingers.L_end
+    400010: Fingers.R
+    400012: Fingers.R_end
+    400014: Foot.L
+    400016: Foot.R
+    400018: Forearm.L
+    400020: Forearm.R
+    400022: Hand.L
+    400024: Hand.R
+    400026: Head
+    400028: Head_end
+    400030: Hips
+    400032: //RootNode
+    400034: Knight
+    400036: Knight Armature
+    400038: Leg.IK.L
+    400040: Leg.IK.L_end
+    400042: Leg.IK.R
+    400044: Leg.IK.R_end
+    400046: Leg.Pole.L
+    400048: Leg.Pole.L_end
+    400050: Leg.Pole.R
+    400052: Leg.Pole.R_end
+    400054: Middle Spine
+    400056: Neck
+    400058: Shin.L
+    400060: Shin.R
+    400062: Shoulder.L
+    400064: Shoulder.R
+    400066: Thigh.L
+    400068: Thigh.R
+    400070: Thumb.1.L
+    400072: Thumb.1.R
+    400074: Thumb.2.L
+    400076: Thumb.2.L_end
+    400078: Thumb.2.R
+    400080: Thumb.2.R_end
+    400082: Toes.L
+    400084: Toes.L_end
+    400086: Toes.R
+    400088: Toes.R_end
+    2100000: Knight
+    4300000: Knight
+    9500000: //RootNode
+    13700000: Knight
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
