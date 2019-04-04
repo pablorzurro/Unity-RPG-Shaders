@@ -10,7 +10,7 @@
  		_LoadingAlphaGradient("Loading alpha gradient (A)", 2D) = "white" {}  // Alpha mask textures for this shader are from https://forum.unity.com/threads/circular-fade-in-out-shader.344816/ or other internet pages
 		_EnchantmentSpeedX("Effect speed X", Range(-1,1)) = 0.0
 		_EnchantmentSpeedY("Effect speed Y", Range(-1,1)) = 0.0
-		_BrightnessFactor("Additivie brightness", Range(0,5)) = 1.0
+		_BrightnessFactor("Additive brightness", Range(0,5)) = 1.0
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
     }
