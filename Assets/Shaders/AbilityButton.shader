@@ -37,7 +37,6 @@
         };
 
 		float _LoadingValue;/*("Loading value", Float) = 0.0*/
-		float _IsEnchanted;/* ("IsEnchanted", Float) = 0.0 */// 0.0 - 1.0, set this value outside to show or not the enchantment effect
 
         half _Glossiness;
         half _Metallic;
@@ -63,7 +62,7 @@
             // Save all the color values from the uvs of each texture
             fixed4 color = tex2D(_MainTex, IN.uv_MainTex) * _Color;
 			float saturationMaskColor = tex2D(_SaturationMaskTex, IN.uv_SaturationMaskTex).r;
-			fixed4 noiseColor = tex2D(_NoiseTex, fixedNoiseUV) * _EnchantmentColor * _IsEnchanted;
+			fixed4 noiseColor = tex2D(_NoiseTex, fixedNoiseUV) * _EnchantmentColor;
 			float loadingMaskColor = tex2D(_LoadingAlphaGradient, IN.uv_LoadingAlphaGradient).r;
 			
 			// Operate with the colors

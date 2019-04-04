@@ -9,21 +9,14 @@ public class AbilityButtonManager : MonoBehaviour
     float m_loadingTime;
 
     [SerializeField]
-    float m_enchantmentDuration;
-
-    [SerializeField]
     Image m_abilityButtonImage;
 
     Material m_abilityButtonMaterialInstance;
 
     float m_elapsedTime;
 
-
     bool m_isButtonClicked;
     bool m_isLoading;
-
-    bool m_enchantmentFinished;
-    bool m_loadingFinished;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +27,6 @@ public class AbilityButtonManager : MonoBehaviour
         }
 
         m_isButtonClicked = false;
-        m_loadingFinished = true;
 
         m_elapsedTime = 0.0f;
 
@@ -67,8 +59,6 @@ public class AbilityButtonManager : MonoBehaviour
 
     void StartLoading()
     {
-        m_loadingFinished = false;
-        FinishEnchantmentEffect(); // Finish it if is already running
         m_elapsedTime = 0.0f;
         m_isLoading = true;
         Invoke("FinishLoading", m_loadingTime);
@@ -76,25 +66,16 @@ public class AbilityButtonManager : MonoBehaviour
 
     void FinishLoading()
     {
-        m_isLoading = false;
-   
-        StartEnchantmentEffect();
+        if(m_elapsedTime >= m_loadingTime)
+        {
+            m_isLoading = false;
+
+            StartEnchantmentEffect();
+        }
     }
 
     void StartEnchantmentEffect()
     {
-        m_enchantmentFinished = false;
-        m_abilityButtonMaterialInstance.SetFloat("_IsEnchanted", 1.0f);
         m_abilityButtonMaterialInstance.SetFloat("_LoadingValue", 1.0f);
-    }
-
-    void FinishEnchantmentEffect()
-    {
-        if(!m_enchantmentFinished)
-        {
-            m_abilityButtonMaterialInstance.SetFloat("_IsEnchanted", 0.0f);
-        }
-
-        m_enchantmentFinished = true;
     }
 }
