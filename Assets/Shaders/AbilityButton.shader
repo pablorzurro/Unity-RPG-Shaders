@@ -56,8 +56,8 @@
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
 			float2 fixedNoiseUV = IN.uv_NoiseTex;
-			fixedNoiseUV.x = fixedNoiseUV.x + (-_Time.y * _EnchantmentSpeedX); // -_Time.y is a correction to follow the standard axis representation
-			fixedNoiseUV.y = fixedNoiseUV.y + (-_Time.y * _EnchantmentSpeedY);
+			fixedNoiseUV.x = fixedNoiseUV.x -_Time.y * _EnchantmentSpeedX; // -_Time.y is a correction to follow the standard axis representation
+			fixedNoiseUV.y = fixedNoiseUV.y -_Time.y * _EnchantmentSpeedY;
 
             // Save all the color values from the uvs of each texture
             fixed4 color = tex2D(_MainTex, IN.uv_MainTex) * _Color;
@@ -75,7 +75,7 @@
 			float isLoadMask = step(loadingMaskColor, _LoadingValue); 
 			float isLoading = step(1.0, _LoadingValue);
 
-			fixed3 saturatedColor = isSaturationMask * color.rgb + (1 - isSaturationMask) * (color.rgb + lum) + (noiseColor * color.a);
+			fixed3 saturatedColor = isSaturationMask * color.rgb + (1.0 - isSaturationMask) * (color.rgb + lum) + (noiseColor * color.a);
 			fixed3 loadingColor = isLoadMask * color.rgb + (1.0 - isLoadMask) * colorGreyscale;
 
             o.Albedo = isLoading * saturatedColor + (1 - isLoading) * loadingColor;
